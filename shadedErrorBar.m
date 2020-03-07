@@ -222,14 +222,13 @@ function H = makePlot(x,y,errBar,lineProps,transparent,patchSaturation)
 
 
     %Make pretty edges around the patch. 
-%     H.edge(1)=plot(x,lE,'-');
-%     H.edge(2)=plot(x,uE,'-');
+    H.edge(1)=plot(x,lE,'-');
+    H.edge(2)=plot(x,uE,'-');
 
-%     set([H.edge], 'color',edgeColor, ...
-%       'HandleVisibility','off', ...
-%       'Tag', 'shadedErrorBar_edge')
-     H.edge(1)=1
-     H.edge(2)=1;
+    set([H.edge], 'color',edgeColor, ...
+      'HandleVisibility','off', ...
+      'Tag', 'shadedErrorBar_edge')
+
 
     % Ensure the main line of the plot is above the other plot elements
     if hostName == 'MATLAB'
